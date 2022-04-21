@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: row-reverse;
     overflow: hidden;
-    background-image: url("../../assets/train_leftbg.png");
+    background-image: url("assets/train_leftbg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -45,7 +45,7 @@
   .tren__abajo-puerta {
     padding: 1em;
     // border: 1px solid white;
-    background-image: url("../../assets/section6_door.png");
+    background-image: url("assets/section6_door.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -68,7 +68,7 @@
     display: flex;
     // border: 1px solid white;
     overflow: hidden;
-    background-image: url("../../assets/train_rigthbg.png");
+    background-image: url("assets/train_rigthbg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
