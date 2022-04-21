@@ -1,0 +1,36 @@
+@use '../abstracts/variables.scss';
+@use 'fonts.scss';
+
+h1 {
+  font-family: $h1-font;
+  font-size: $h1-size;
+}
+
+h2 {
+  font-family: $h2-font;
+  font-size: $h2-size;
+  font-weight: $h2-weight;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: $h3-font;
+  font-size: $h3-size;
+  text-transform: capitalize;
+  font-weight: 100;
+}
+
+p {
+  font-family: $p-font;
+}
+
+
+// h2 {
+//   font-family: ;
+//   font-size: ;
+// }
+
+// h3 {
+//   font-family: ;
+//   font-size: ;
+// }

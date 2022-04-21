@@ -1,0 +1,11 @@
+@use '../abstracts/variables.scss';
+@use '../base/fonts.scss';
+
+a {
+  font-family: $a-font;
+  font-size: $a-size;
+  border: 2px solid white;
+  padding: 0.5em 1em 0.5em 1em;
+  width: fit-content;
+  text-transform: capitalize;
+}

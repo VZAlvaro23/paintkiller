@@ -1,0 +1,119 @@
+.section4 {
+    margin-top: 20em;
+
+  min-height: 100vh;
+  width: 100%;
+    // border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container4 {
+  width: 80%;
+  height: 80%;
+    // border: 1px solid white;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.section4__content {
+    // border: 1px solid white;
+  h2 {
+    color: $color4;
+  }
+  p {
+    margin: 1em 0;
+  }
+  a {
+    margin: 0 auto;
+  }
+}
+
+.section4__images {
+  padding-left: 5em;
+  display: flex;
+  align-items: flex-end;
+    // border: 1px solid white;
+  // background-image: url("../../assets/section4_bg.png");
+  // background-position: top right;
+  // background-repeat: no-repeat;
+  // background-size: 80% 80%;
+  img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+}
+.pegata {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.parte__arriba {
+  padding:1em 0;
+  text-align: center;
+  width: 100%;
+  min-height: 2em;
+  border-radius: 6px 6px 0 0;
+  background: red;
+  color: white;
+}
+.parte__abajo {
+  height: 10em;
+  width: 100%;
+
+  align-items: center;
+  background: white;
+  box-sizing: border-box;
+  border-color: red;
+  border-width: 0 10px 50px 10px;
+  border-radius: 0 0 6px 6px;
+  border-style: solid;
+}
+.pegata__title {
+  font-family: $h1-pegata-font;
+  font-size: $h1-pegata-size;
+  text-transform: uppercase;
+  
+}
+.pegata__subtitle {
+  font-family: $h1-pegata-font;
+  font-size: $h1-pegata-subtitle-size;
+}
+
+.pegata__input {
+  border: none;
+  font-family: "Just Another Hand", cursive;
+  font-size: 4em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  &::placeholder {
+    color: black;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section4 {
+    margin-top: 2em;
+  }
+  .container4 {
+    margin-top: 2em;
+    grid-template-columns: 1fr;
+  }
+  .section4__content {
+    text-align: center;
+    a {
+      margin: auto;
+    }
+  }
+  .section4__images {
+    display: none;
+  }
+  .parte__arriba,
+  .parte__abajo {
+    width: 100%;
+    height: 100%;
+  }
+}
