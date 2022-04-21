@@ -85,6 +85,9 @@
   .tren__arriba {
     padding: 0;
     text-align: center;
+    h2, h3 {
+      margin: 0;
+    }
   }
   .tren__abajo {
     grid-template-columns: 1fr;
