@@ -1,8 +1,11 @@
 .home {
   min-height: 100vh;
   width: 100%;
+  // max-width: 1536px;
+  //   max-height: 754px;
   display: grid;
   grid-template-columns: 50% 50%;
+
 }
 
 .home__section:nth-child(1) {
@@ -23,7 +26,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  width: 30%;
   min-height: 80%;
 }
 
@@ -43,9 +46,10 @@
   object-fit: contain;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   .home {
-    margin-top: 2em;  
+    max-height: none;
+    margin-top: 2em;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
   }

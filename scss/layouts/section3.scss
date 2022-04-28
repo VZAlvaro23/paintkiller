@@ -1,7 +1,10 @@
 .section3 {
-    margin-top: 20em;
+  margin-top: 20em;
   min-height: 100vh;
   width: 100%;
+  // max-width: 1536px;
+  // max-height: 754px;
+
   display: grid;
   grid-template-columns: 60% 40%;
   // border: 1px solid white;
@@ -60,6 +63,7 @@
 
 @media screen and (max-width: 900px) {
   .section3 {
+    max-height: none;
     margin-top: 2em;
     grid-template-columns: 1fr;
     grid-template-rows: auto 500px;
