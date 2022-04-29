@@ -1,107 +1,97 @@
 .section1 {
   margin-top: 20em;
   min-height: 100vh;
-  width: 100%;
-
-  display: grid;
-  grid-template-columns: 40% 60%;
-  // border: 1px solid white;
-}
-
-.section1__img {
-  // border: 1px solid white;
+  max-width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-.section1__img img {
-  width: 90%;
-  height: 60%;
-  // border: 1px solid white;
-  object-fit: contain;
-}
-
 .section1__content {
-  // border: 1px solid white;
-  display: grid;
-  grid-template-rows: minmax(auto, 20%) minmax(40%, auto) minmax(auto, 40%);
+  margin: 2em 6em 2em 0;
+  h2 {
+    color: $color1;
+  }
+  p {
+    margin: 2em 0;
+  }
   img {
     display: none;
   }
 }
 
-.content__text {
-  grid-row-start: 2;
-  // border: 1px solid white;
-  h2 {
-    color: $color1;
-  }
-  p {
-    margin: 2em 8em 0 0;
-  }
-}
-
-.content__devices {
-  display: flex;
-
-  grid-row-start: 3;
-  // border: 1px solid white;
-}
-
 .devices {
-  // border: 1px solid white;
-  width: fit-content;
-  height: fit-content;
-  padding: 1em;
+  padding-bottom: 2em;
   background-image: url("assets/section1_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  width: fit-content;
   svg {
     margin: 1em;
   }
 }
 
-@media screen and (max-width: 950px) {
+
+@media screen and (max-width: 1000px) {
   .section1 {
-    margin-top: 2em;
-    max-height: none;
-    grid-template-columns: 1fr;
-    // grid-template-rows: auto auto;
+    flex-direction: column;
+    padding: 0 8em;
+    text-align: center;
   }
   .section1__content {
-    grid-template-rows: auto;
+    margin: 0;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .devices {
+    margin: 0 auto;
   }
 
-  .section1__img img {
+  .section1__img {
     display: none;
   }
-  .content__text {
-    height: fit-content;
-    h2 {
-      text-align: center;
-    }
-    h3 {
-      text-align: center;
-    }
-    p {
-      margin: 2em;
-      text-align: center;
-    }
+}
+
+@media screen and (max-width: 600px) {
+  .section1 {
+    padding: 0 4em;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .section1 {
+    padding: 0 2em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .section1 {
+    padding: 0;
   }
 
   .section1__content {
-    img {
-      margin: 0 auto;
-      display: block;
-      width: 50%;
-      height: 50%;
-      // border: 1px solid white;
-      object-fit: contain;
+    p {
+      padding: 2em;
     }
   }
-  .content__devices {
-    justify-content: center;
+}
+
+@media screen and (min-width: 1500px) {
+  .section1 {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .section1 {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .section1 {
+    width: 60%;
   }
 }

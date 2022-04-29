@@ -1,6 +1,6 @@
 .home {
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,6 +46,7 @@
 
 @media screen and (max-width: 900px) {
   .home {
+    margin-top: 2em;
     flex-direction: column;
     padding: 0 8em;
     .section__text {
@@ -60,5 +61,10 @@
       width: 100%;
     }
   }
+}
 
+@media screen and (max-width: 600px) {
+  .home {
+    padding: 0 4em;
+  }
 }
