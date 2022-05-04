@@ -26,8 +26,10 @@
       <!-- <section class="home__section"> -->
       <div class="section__hero">
         <img src="assets/home_img1.png" />
-        <div class = "section__hero-absolute">
-          <div class = "hero_img-hair"></div>
+        <div class="section__hero-absolute">
+          <div class="hero_img-hair">
+            <!-- <img src = "assets/home_imgbg.png"> -->
+          </div>
           <img src="assets/home_img2.png" />
         </div>
       </div>
@@ -117,16 +119,16 @@
         <a href="#">learn more</a>
       </div>
       <div class="section2__images">
-      <!-- <!-- <img src = "assets/section2_img3.png"> -->
-      <img src="assets/section2_img3.png" />
-      <div class="section2__images-absolute">
-        <img src="assets/section2_img2.png" />
-      </div>
+        <!-- <!-- <img src = "assets/section2_img3.png"> -->
+        <img src="assets/section2_img3.png" />
+        <div class="section2__images-absolute">
+          <img src="assets/section2_img2.png" />
+        </div>
       </div>
     </section>
     <section class="section3">
       <div class="section3__img">
-        <img src = "assets/bocata.png">
+        <img class="bocata" src="assets/bocata.png" />
       </div>
       <div class="section3__text">
         <h2>use your brightness</h2>
@@ -186,7 +188,7 @@
     <section class="section5">
       <h2 class="section5__title">enjoy the nature of colors</h2>
       <h3 class="section5__subtitle">how we do it</h3>
-      <article class="section5__article">
+      <article class="section5__article first-article">
         <img src="assets/section5_article1.png" />
         <div class="article__text">
           <h3>made for artists</h3>
@@ -198,7 +200,9 @@
           </p>
         </div>
       </article>
-      <article class="section5__article section5__article-reverse">
+      <article
+        class="section5__article second-article section5__article-reverse"
+      >
         <div class="article__text">
           <h3>made for artists</h3>
           <p>
@@ -210,7 +214,7 @@
         </div>
         <img src="assets/section5_article2.png" />
       </article>
-      <article class="section5__article">
+      <article class="section5__article third-article">
         <img src="assets/section5_article3.png" />
         <div class="article__text">
           <h3>made for artists</h3>
@@ -259,5 +263,90 @@
       <img src="assets/line.png" class="line" />
       <a href="#"><img src="assets/linkedin.png" /></a>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script>
+      let t1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".home",
+          toggleActions: "play none none none",
+        },
+      });
+
+      t1.add("start")
+        .from(".section__text", { y: -200, opacity: 0, duration: 1.5 }, "start")
+        .from(
+          ".hero_img-hair, .section__hero > img",
+          { x: 200, duration: 1.5 },
+          "start"
+        )
+        .from(".section__hero-absolute > img", { opacity: 0, duration: 1.5 });
+      let t2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section1",
+          toggleActions: "play none none none",
+        },
+      });
+      t2.from(".section1__content", { x: 200, opacity: 0, duration: 1.5 });
+      let t3 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section2",
+          toggleActions: "play none none none",
+          start: "center center",
+        },
+      });
+      t3.from(".section2__images-absolute", { scale: 0, duration: 1.5 }).to(
+        ".section2__images-absolute",
+        { scale: 1, duration: 1.5 }
+      );
+      let t4 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section3",
+          toggleActions: "play none none none",
+          // start: "15em 15em",
+        },
+      });
+      t4.from(".bocata", {
+        opacity: 0,
+        y: "160",
+        duration: 1.25,
+      });
+      let t5 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section5",
+          toggleActions: "play none none none",
+          start: "top top",
+        },
+      });
+      t5.from(".first-article", {
+        opacity: 0,
+        x: "-160",
+        duration: 1.25,
+      });
+      let t6 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section5",
+          toggleActions: "play none none none",
+          start: "center center",
+        },
+      });
+      t6.from(".second-article", {
+        opacity: 0,
+        x: "160",
+        duration: 1.25,
+      });
+      let t7 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section5",
+          toggleActions: "play none none none",
+          start: "bottom bottom",
+        },
+      });
+      t7.from(".third-article", {
+        opacity: 0,
+        x: "-160",
+        duration: 1.25,
+      });
+    </script>
   </body>
 </html>

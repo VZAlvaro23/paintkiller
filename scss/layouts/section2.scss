@@ -31,10 +31,7 @@
   .section2__images-absolute {
     position: absolute;
     top: 0;
-    transition: transform 0.5s;
-    &:hover {
-      transform: scale(1.1);
-    }
+    
   }
 }
 
