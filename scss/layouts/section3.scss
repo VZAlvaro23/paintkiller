@@ -11,10 +11,17 @@
 }
 
 .section3__img {
+  position: relative;
   // border: 1px solid white;
   background-image: url("assets/section3_img.png");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  img {
+    position: absolute;
+    left: 50%;
+    top: -150px;
+  }
   // img {
   //   min-width: 100%;
   //   max-width: 100%;
@@ -97,6 +104,9 @@
   .section3__img {
     background-position: center center;
     grid-row: 2;
+    img {
+      display: none;
+    }
   }
   .section3__text {
     text-align: center;
